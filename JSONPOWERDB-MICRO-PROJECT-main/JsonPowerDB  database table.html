@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://api.login2explore.com:5577/user/jpdb_view.html -->
+<html lang="en" style="overflow: hidden;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="JsonPowerDB - Dashboard">
+        <meta name="author" content="Login2Xplore">
+        <meta name="keywords" content="">
+        <link rel="shortcut icon" href="http://login2explore.com/img/l2x/pi-logo.png">
+
+        <title>JsonPowerDB Home Page</title>
+        <!-- Bootstrap CSS -->    
+        <link href="./JsonPowerDB  database table_files/bootstrap.min.css" rel="stylesheet">
+        <!-- bootstrap theme -->
+        <link href="./JsonPowerDB  database table_files/bootstrap-theme.css" rel="stylesheet">
+        <!--external css-->
+        <!-- font icon -->
+        <link href="./JsonPowerDB  database table_files/elegant-icons-style.css" rel="stylesheet">
+        <link href="./JsonPowerDB  database table_files/font-awesome.min.css" rel="stylesheet">
+        <!-- Custom styles -->
+        <link href="./JsonPowerDB  database table_files/style.css" rel="stylesheet">
+        <link href="./JsonPowerDB  database table_files/style-responsive.css" rel="stylesheet">
+        <!-- New Custom styles -->
+        <link href="./JsonPowerDB  database table_files/captcha.css" rel="stylesheet">
+        <link href="./JsonPowerDB  database table_files/aside-menu.css" rel="stylesheet">
+        <link href="./JsonPowerDB  database table_files/responsive-tab.css" rel="stylesheet">
+
+        <script src="./JsonPowerDB  database table_files/pjs.utils.js.download"></script>
+        <script>var pageID = "pjdb_JsobDB_view";</script>
+
+
+        <style>
+            .dropdown-toggle{
+                height: 34px;
+            }
+
+            #pjdb-table td{
+
+                /*                max-width: 30px;*/
+                /*width: 100%;*/
+                text-align: left;
+                /*table-layout:fixed;*/
+                word-break: break-all;
+                word-wrap:break-word;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+
+    <body class="pjdb-bg-img-body" style="">
+        <!-- container section start -->
+        <section id="container" class="">
+            <header class="header dark-bg">
+                <div class="toggle-nav">
+                    <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+                </div>
+                <div id="pjdb-common-header"><!--logo start-->
+<a href="http://login2xplore.com/" target="blank" class="logo">Json<span class="lite">PowerDB</span></a>
+
+<div class="top-nav notification-row">                
+    <!-- notificatoin dropdown start-->
+    <ul class="nav pull-right top-menu">
+
+        <!-- task notificatoin end -->
+        <!-- inbox notificatoin start-->
+        <li>
+            <a data-toggle="dropdown" class="dropdown-toggle " href="http://api.login2explore.com:5577/user/jpdb_view.html#">
+                <div id="pjdb-header-info2">
+                    <b>
+                    </b>
+                </div> 
+            </a>
+        </li>
+        <li>
+            <a data-toggle="dropdown" class="dropdown-toggle " href="http://api.login2explore.com:5577/user/jpdb_view.html#">
+                <div id="pjdb-header-info" style="display: none;">
+                    <b>
+                    </b>
+                </div> 
+
+            </a>
+        </li>
+
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="http://api.login2explore.com:5577/user/jpdb_view.html#">
+                <span class="profile-ava">
+                    <img id="userProfile" height="32" width="32" alt="" src="./JsonPowerDB  database table_files/customSelect-arrow.gif">
+                </span>
+                <span class="username" id="pjdb_user_name">vkirti365@gmail.com</span>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu extended logout">
+
+                <li class="eborder-top">
+                    <a href="http://api.login2explore.com:5577/user/profile.html"><i class="icon_profile"></i> My Profile</a>
+                </li>
+                <li>
+                    <a href="http://api.login2explore.com:5577/user/change_pw.html"><i class="icon_key_alt"></i>Change Password</a>
+                </li>
+                <li>
+                    <a href="http://api.login2explore.com:5577/user/jpdb_view.html#" onclick="myLogout()"><i class="icon_upload"></i> Log Out</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <!-- notificatoin dropdown end--> 
+</div>
+<script src="./JsonPowerDB  database table_files/common-loggedin.js.download"></script>
+</div>
+            </header>
+            <div id="pjdb-common-navigation"><style>
+    ul.sidebar-menu li.active a:hover{
+        background: gray;
+    }
+    /*subMenu*/
+    ul.sub-menu .sub li.active a:hover{   
+        background: gray;
+    }
+    ul.sidebar-menu li.active a:focus{
+        background: lightblue;
+    }
+    /*subMenu*/
+    ul.sub-menu .sub li.active a:focus{
+        background: lightblue;
+    }
+
+    .customactive{
+        background : darkgoldenrod;        
+    }
+    .activeText{
+        color: yellow;
+        font-weight: bold;
+    }
+</style>
+<script>
+    jQuery('#sidebar .sub-menu > a').click(function () {
+        var last = jQuery('.sub-menu.open', jQuery('#sidebar'));
+        jQuery('.menu-arrow').removeClass('arrow_carrot-right');
+        jQuery('.sub', last).slideUp(200);
+        var sub = jQuery(this).next();
+        if (sub.is(":visible")) {
+            jQuery('.menu-arrow').addClass('arrow_carrot-right');
+            sub.slideUp(200);
+        } else {
+            jQuery('.menu-arrow').addClass('arrow_carrot-down');
+            sub.slideDown(200);
+        }
+        var o = (jQuery(this).offset());
+        diff = 200 - o.top;
+        if (diff > 0)
+            jQuery("#sidebar").scrollTo("-=" + Math.abs(diff), 500);
+        else
+            jQuery("#sidebar").scrollTo("+=" + Math.abs(diff), 500);
+    });
+</script>
+<aside>
+    <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu "> 
+            <li id="pjdb_dashboard" class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/dashboard.html">
+                    <i class="icon_house_alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>   
+            <li class="sub-menu">
+                <a class="" href="javascript:;">
+                    <i class="icon_table"></i>
+                    <span>Visualize</span>
+                    <span class="menu-arrow arrow_carrot-right"></span>
+                </a>
+                <ul class="sub">
+                    <li id="pjdb_JsobDB_view" class="customactive"><a class="" href="http://api.login2explore.com:5577/user/jpdb_view.html">JsonDB</a></li>                          
+                    <li id="pjdb_kvpDB_view" class="active"><a class="" href="http://api.login2explore.com:5577/user/kvp_db_view.html">KvpDB</a></li>
+                </ul>
+            </li>
+            <li id="pjdb_insert" class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/insert.html">
+                    <i class="icon_clipboard"></i>
+                    <span>Insert</span>
+                </a>
+            </li>
+            <li id="pjdb_execute" class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/execute.html">
+                    <i class="icon_lifesaver"></i>
+                    <span>Execute</span>
+                </a>
+            </li>   
+            <li id="pjdb_script" class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/script.html">
+                    <i class="icon_star"></i>
+                    <span>NoSQL</span>
+                </a>
+            </li> 
+            <!--            <li id="pjdb_query_wizard" class="active">
+                            <a class="" href="json_power_sql_query_wizrd.html">
+                                <i class="icon_building"></i>
+                                <span>Query Wizard</span>
+                            </a>
+                        </li> -->
+            <li id="pjdb_user_tools_backup" class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/user_tools.html">
+                    <i class="icon_cogs"></i>
+                    <span>Tools</span>
+                </a>
+            </li> 
+            <li id="pjdb_user_help" class="active">
+                <a class="" href="https://login2explore.com/jpdb/docs.html" target="_blank">
+                    <i class="icon_documents_alt"></i>
+                    <span>Help</span>
+                </a>
+            </li> 
+<!--            <li id="pjdb_settings" class="active">
+                <a class="" href="settings.html">
+                    <i class="icon_tools"></i>
+                    <span>SMTP Settings</span>
+                </a>
+            </li> -->
+            <li id="pjdb_profile" class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/profile.html">
+                    <i class="icon_profile"></i>
+                    <span>Profile</span>
+                </a>
+            </li> 
+            <li id="pjdb_change_pw" class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/change_pw.html">
+                    <i class="icon_key_alt"></i>
+                    <span>Change Password</span>
+                </a>
+            </li> 
+            <!--            <li  id="pjdb_download" class="active">
+                            <a class="" href="download.html">
+                                <i class="icon_download"></i>
+                                <span>Download</span>
+                            </a>
+                        </li>-->
+            <li class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/jpdb_view.html" onclick="myLogout()">
+                    <i class="icon_upload"></i>
+                    <span>Logout</span>
+                </a>
+            </li> 
+
+        </ul>
+        <!-- sidebar menu end-->
+    </div>
+</aside></div>
+            <!--<div id="pjdb-page-sidebar"></div>-->   
+            <!--main content start-->
+            <section id="main-content">
+                <section class="wrapper">
+                    <div class="row">
+
+                        <!--/.col-->
+
+                        <div class="col-lg-12">
+                            <form class="form-horizontal " method="get">
+                                <div class="form-group">
+                                    <!-- <label class="control-label col-lg-2" for="inputSuccess">Control sizing</label>-->
+                                    <div class="col-sm-6">
+                                        <select id="pjdb-db" class="form-control input-lg m-bot15 blue-bg" onchange="getrelation()"><option value="" +="" style="color:#ffc34d ;font-size: 18px; ">Select Database</option>
+<option value="Student">Student</option>
+</select>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select id="pjdb-rel" class="form-control input-lg m-bot15 blue-bg" onchange="selectRelation()"><option value="">Select Relation</option>
+<option value="Student-Rel">Student-Rel</option>
+</select>
+                                    </div>
+                                    <!--                                    <div class="col-sm-6"  >
+                                                                            <select id="pjdb-index-col" class="form-control input-lg m-bot15 blue-bg" onchange="">
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-sm-6"  >
+                                                                            <select id="pjdb-non-index-col" class="form-control input-lg m-bot15 blue-bg" onchange="">
+                                                                            </select>
+                                                                        </div>-->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <div class="form-group">
+                                <div id="pjdb-checkbox-columns" style="color: #1985ac ; font-size: medium;"></div>
+                            </div>
+                            <div class="form-group">
+                                <div id="pjdb-checkbox2-columns" style="color: #1985ac ; font-size: medium"></div>
+                            </div>
+
+                            <!--                            <div class="form-group">
+                                                            <label class="control-label col-lg-2" for="inputSuccess"><b>Non-Indexed Column</b></label>
+                                                            <div id ="pjdb-checkbox2-columns" class="col-lg-10">
+                                                            </div>
+                                                        </div>-->
+                        </div>
+                    </div>
+                    <!-- Inline form-->
+                    <div class="row">
+                        <!--<center>-->
+                        <div class="col-lg-12">
+                            <!--<section class="panel">-->
+
+                            <!--                                    <div class="panel-body">-->
+                            <!--<form class="form-inline" role="form">-->
+                            <div class="btn-row" id="pageinfo" style="display: block;">
+                                <div class="btn-group">
+                                    <div class="btn-group">
+                                        <label class="sr-only" for="pageno">Page no.</label>
+                                        <input type="number" class="form-control" id="pageno" placeholder="Pageno." style="width: 80px; text-align: center" onchange="setPageNo(this.id)">
+                                    </div>
+                                    <button id="first" class="btn btn-default" type="button" onclick="setPageNo(this.id)" disabled=""> &lt;&lt; </button>
+                                    <button id="previous" class="btn btn-default" type="button" onclick="setPageNo(this.id)" disabled=""> &lt; </button>
+                                    <button id="next" class="btn btn-default" type="button" onclick="setPageNo(this.id)" disabled=""> &gt; </button>
+                                    <button id="last" class="btn btn-default" type="button" onclick="setPageNo(this.id)" disabled=""> &gt;&gt; </button>
+                                    <div class="btn-group">
+                                        <div id="pageSizeDropdown"><select style="width: 90px;" data-toggle="dropdown" class="btn btn-default dropdown-toggle" id="pagesize" onchange="setPageNo(this.id)"><option value="10">10</option><option value="20">20</option><option value="30">30</option><option value="100">100</option></select></div>
+                                        <!--<select style="width: 90px;" data-toggle="dropdown" class="btn btn-default dropdown-toggle" id="pagesize" onchange="setPageNo(this.id)">-->
+                                        <!--                                            <option value="default"> Default </option>
+                                                                                    <option value="10"> 10</option>
+                                                                                    <option value="20"> 20</option>
+                                                                                    <option value="50"> 50</option>
+                                                                                    <option value="100"> 100 </option>-->
+
+                                        <!--</select>-->
+                                    </div>
+                                    <div class="btn-group">
+                                        <label class="sr-only" for="custompagesize">Page Size</label>
+                                        <input type="number" class="form-control" id="custompagesize" placeholder="PageSize" style="width: 80px; text-align: center" onchange="setPageNo(this.id); pjdbGetPage();">
+                                    </div>
+                                </div>
+                                <span id="viewerror" style="color: #c6080d"></span>
+                            </div>
+
+                            <!--For viewing popup on page(regarding confirmation or displaying td value of complex json)-->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h4 class="modal-title">Record Value</h4>
+                                        </div>
+                                        <div class="modal-body" id="recordValue">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--</form>-->
+
+                            <!--</div>-->
+                            <!--</section>-->
+
+                        </div>
+                        <!--</center>-->
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <section class="panel">
+                                <header class="panel-heading">
+                                    <span id="recInfo">Page: 1/1, Page size: 10, Record 2 - 2 of 2</span>
+                                </header>
+                                <div id="pjdb-record-table" class="pjdb-table-responsive"><table id="pjdb-table" class="table"><thead><tr><th width="3%">#</th><th width="15%"> <span style="font-size:12px; color:#97d3c5"></span><br>createTime</th><th> <span style="font-size:12px; color:#97d3c5"> <i class="icon_key_alt"></i>String</span><br>email</th><th> <span style="font-size:12px; color:#97d3c5"> <i class="icon_key_alt"></i>String</span><br>id</th><th> <span style="font-size:12px; color:#97d3c5"> <i class="icon_key_alt"></i>String</span><br>mobileno</th><th> <span style="font-size:12px; color:#97d3c5"> <i class="icon_key_alt"></i>String</span><br>name</th></tr></thead><tbody><tr></tr>
+<tr><td style="line-height: 1.0;">2</td><td style="line-height: 1.0;">7/6/2023, 5:11:57 PM</td><td style="line-height: 1.0;">lisa@gmail.com</td><td style="line-height: 1.0;">2</td><td style="line-height: 1.0;">9967878678</td><td style="line-height: 1.0;">lisa</td></tr>
+</tbody></table></div> 
+                            </section>
+                        </div>
+                    </div>
+
+                    <!-- page end-->
+                </section>
+            </section>
+
+        </section>
+
+        <div id="pjdb-common-footer">
+<!--<div class="text-right" id="pjdb_footer">
+    <div class="credits">
+
+                All the links in the footer should remain intact. 
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
+
+        Copyright © 2017 - <a href="https://login2explore.com">Login2Xplore</a>, All Rights Reserved &nbsp;
+
+                <a href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+</div>-->
+
+<script src="./JsonPowerDB  database table_files/footer-script.js.download"></script>
+
+<style>
+    #pjdb_footer {
+        position:fixed;bottom:0;left:0;right:0;height:30px; 
+    } 
+</style>
+
+<div class="text-right" id="pjdb_footer">
+    <div class="credits">
+
+        <!--        All the links in the footer should remain intact. 
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin-->
+        JPDB <span id="jpdb-sev-version">_0_3_2.20211203</span> -
+        Copyright © 2017 - <a href="http://login2explore.com/">Login2Xplore</a>, All Rights Reserved &nbsp;
+
+        <!--        <a href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+    </div>
+</div>
+</div>
+
+        <script>
+
+            function pjdbViewDataBase()
+            {
+                var userToken = localStorage.getItem('jpdbUserToken');
+                var myObj = {
+                    token: userToken,
+                    cmd: 'GETALLDB'
+                };
+                var obj = JSON.stringify(myObj);
+                $.post(baseURL + "/api/irl", obj, function (result) {
+                    var jsonObj = JSON.parse(result);
+                    var text = "";
+                    style = "color:#ffc34d ;font-size: 18px; "
+                    text = text + "<option value=\"" + "\" + style= \"color:#ffc34d ;font-size: 18px; \">" + "Select Database" + "</option>\n";
+                    $.each(jsonObj.data, function (index, row) {
+                        text = text + "<option value=\"" + row + "\">" + row + "</option>\n";
+                    });
+
+//                        $.each(row, function (key, value) {
+//                            alert("key= "+key +"value= "+value);
+//                            if (key === "databases") {
+//                                $.each(value, function (i, valCount) {
+//                                    countDB++;
+//                                });
+//                            }
+//                        });
+//                    });
+//                    $("#pjdb-dev-count").html(countDev);
+                    $("#pjdb-db").html(text);
+
+                });
+            };
+
+        </script>
+
+        <script src="./JsonPowerDB  database table_files/jquery.js.download"></script>
+        <script src="./JsonPowerDB  database table_files/bootstrap.min.js.download"></script>
+        <!-- nice scroll -->
+        <script src="./JsonPowerDB  database table_files/jquery.scrollTo.min.js.download"></script>
+        <script src="./JsonPowerDB  database table_files/jquery.nicescroll.js.download" type="text/javascript"></script>
+        <!-- jquery validate js -->
+        <script type="text/javascript" src="./JsonPowerDB  database table_files/jquery.validate.min.js.download"></script>
+        <!--custome script for all page-->
+        <script src="./JsonPowerDB  database table_files/scripts.js.download"></script>    
+
+        <!-- custom form validation script for this page-->
+        <script src="./JsonPowerDB  database table_files/view-script.js.download"></script>
+        <!--<script src="./js/common-loggedin.js"></script>-->               
+
+        <script> $("#pjdb-common-navigation").load("navigation.html");</script>
+        <script> $("#pjdb-common-header").load("header.html");</script>
+        <script> $("#pjdb-common-footer").load("footer.html");</script>
+    
+<div id="ascrail2000" class="nicescroll-rails" style="width: 6px; z-index: 1000; background: rgb(247, 247, 247); cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; display: block; opacity: 0;"><div style="position: relative; top: 0px; float: right; width: 6px; height: 606px; background-color: rgb(0, 122, 255); background-clip: padding-box; border-radius: 10px;"></div></div><div id="ascrail2000-hr" class="nicescroll-rails" style="height: 6px; z-index: 1000; background: rgb(247, 247, 247); position: fixed; left: 0px; width: 100%; bottom: 0px; cursor: default; display: none; opacity: 0;"><div style="position: relative; top: 0px; height: 6px; width: 1024px; background-color: rgb(0, 122, 255); background-clip: padding-box; border-radius: 10px;"></div></div></body></html>

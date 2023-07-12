@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://api.login2explore.com:5577/user/dashboard.html -->
+<html lang="en" style="overflow: hidden;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="JsonPowerDB - Dashboard">
+        <meta name="author" content="Login2Xplore">
+        <meta name="keywords" content="">
+        <link rel="shortcut icon" href="http://login2explore.com/img/l2x/pi-logo.png">
+
+        <title>JsonPowerDB Home Page</title>
+        <!-- Bootstrap CSS -->    
+        <link href="./JsonPowerDB Home Page_files/bootstrap.min.css" rel="stylesheet">
+        <!-- bootstrap theme -->
+        <link href="./JsonPowerDB Home Page_files/bootstrap-theme.css" rel="stylesheet">
+        <!--external css-->
+        <!-- font icon -->
+        <link href="./JsonPowerDB Home Page_files/elegant-icons-style.css" rel="stylesheet">
+        <link href="./JsonPowerDB Home Page_files/font-awesome.min.css" rel="stylesheet">
+        <!-- Custom styles -->
+        <link href="./JsonPowerDB Home Page_files/style.css" rel="stylesheet">
+        <link href="./JsonPowerDB Home Page_files/style-responsive.css" rel="stylesheet">
+        <!-- New Custom styles -->
+        <link href="./JsonPowerDB Home Page_files/captcha.css" rel="stylesheet">
+        <link href="./JsonPowerDB Home Page_files/aside-menu.css" rel="stylesheet">
+
+        <script src="./JsonPowerDB Home Page_files/pjs.utils.js.download"></script>
+        <script>var pageID = "pjdb_dashboard";</script>
+    </head>
+
+    <body class="pjdb-bg-img-body" style="">
+        <!-- container section start -->
+        <section id="container" class="">
+            <header class="header dark-bg">
+                <div class="toggle-nav">
+                    <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+                </div>
+
+                <div id="pjdb-common-header"><!--logo start-->
+<a href="http://login2xplore.com/" target="blank" class="logo">Json<span class="lite">PowerDB</span></a>
+
+<div class="top-nav notification-row">                
+    <!-- notificatoin dropdown start-->
+    <ul class="nav pull-right top-menu">
+
+        <!-- task notificatoin end -->
+        <!-- inbox notificatoin start-->
+        <li>
+            <a data-toggle="dropdown" class="dropdown-toggle " href="http://api.login2explore.com:5577/user/dashboard.html#">
+                <div id="pjdb-header-info2">
+                    <b>
+                    </b>
+                </div> 
+            </a>
+        </li>
+        <li>
+            <a data-toggle="dropdown" class="dropdown-toggle " href="http://api.login2explore.com:5577/user/dashboard.html#">
+                <div id="pjdb-header-info" style="display: none;">
+                    <b>
+                    </b>
+                </div> 
+
+            </a>
+        </li>
+
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="http://api.login2explore.com:5577/user/dashboard.html#">
+                <span class="profile-ava">
+                    <img id="userProfile" height="32" width="32" alt="" src="./JsonPowerDB Home Page_files/customSelect-arrow.gif">
+                </span>
+                <span class="username" id="pjdb_user_name">vkirti365@gmail.com</span>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu extended logout">
+
+                <li class="eborder-top">
+                    <a href="http://api.login2explore.com:5577/user/profile.html"><i class="icon_profile"></i> My Profile</a>
+                </li>
+                <li>
+                    <a href="http://api.login2explore.com:5577/user/change_pw.html"><i class="icon_key_alt"></i>Change Password</a>
+                </li>
+                <li>
+                    <a href="http://api.login2explore.com:5577/user/dashboard.html#" onclick="myLogout()"><i class="icon_upload"></i> Log Out</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <!-- notificatoin dropdown end--> 
+</div>
+<script src="./JsonPowerDB Home Page_files/common-loggedin.js.download"></script>
+</div>
+            </header>
+            <div id="pjdb-common-navigation"><style>
+    ul.sidebar-menu li.active a:hover{
+        background: gray;
+    }
+    /*subMenu*/
+    ul.sub-menu .sub li.active a:hover{   
+        background: gray;
+    }
+    ul.sidebar-menu li.active a:focus{
+        background: lightblue;
+    }
+    /*subMenu*/
+    ul.sub-menu .sub li.active a:focus{
+        background: lightblue;
+    }
+
+    .customactive{
+        background : darkgoldenrod;        
+    }
+    .activeText{
+        color: yellow;
+        font-weight: bold;
+    }
+</style>
+<script>
+    jQuery('#sidebar .sub-menu > a').click(function () {
+        var last = jQuery('.sub-menu.open', jQuery('#sidebar'));
+        jQuery('.menu-arrow').removeClass('arrow_carrot-right');
+        jQuery('.sub', last).slideUp(200);
+        var sub = jQuery(this).next();
+        if (sub.is(":visible")) {
+            jQuery('.menu-arrow').addClass('arrow_carrot-right');
+            sub.slideUp(200);
+        } else {
+            jQuery('.menu-arrow').addClass('arrow_carrot-down');
+            sub.slideDown(200);
+        }
+        var o = (jQuery(this).offset());
+        diff = 200 - o.top;
+        if (diff > 0)
+            jQuery("#sidebar").scrollTo("-=" + Math.abs(diff), 500);
+        else
+            jQuery("#sidebar").scrollTo("+=" + Math.abs(diff), 500);
+    });
+</script>
+<aside>
+    <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu "> 
+            <li id="pjdb_dashboard" class="customactive">
+                <a class="" href="http://api.login2explore.com:5577/user/dashboard.html">
+                    <i class="icon_house_alt"></i>
+                    <span class="activeText">Dashboard</span>
+                </a>
+            </li>   
+            <li class="sub-menu">
+                <a class="" href="javascript:;">
+                    <i class="icon_table"></i>
+                    <span>Visualize</span>
+                    <span class="menu-arrow arrow_carrot-right"></span>
+                </a>
+                <ul class="sub">
+                    <li id="pjdb_JsobDB_view" class="active"><a class="" href="http://api.login2explore.com:5577/user/jpdb_view.html">JsonDB</a></li>                          
+                    <li id="pjdb_kvpDB_view" class="active"><a class="" href="http://api.login2explore.com:5577/user/kvp_db_view.html">KvpDB</a></li>
+                </ul>
+            </li>
+            <li id="pjdb_insert" class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/insert.html">
+                    <i class="icon_clipboard"></i>
+                    <span>Insert</span>
+                </a>
+            </li>
+            <li id="pjdb_execute" class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/execute.html">
+                    <i class="icon_lifesaver"></i>
+                    <span>Execute</span>
+                </a>
+            </li>   
+            <li id="pjdb_script" class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/script.html">
+                    <i class="icon_star"></i>
+                    <span>NoSQL</span>
+                </a>
+            </li> 
+            <!--            <li id="pjdb_query_wizard" class="active">
+                            <a class="" href="json_power_sql_query_wizrd.html">
+                                <i class="icon_building"></i>
+                                <span>Query Wizard</span>
+                            </a>
+                        </li> -->
+            <li id="pjdb_user_tools_backup" class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/user_tools.html">
+                    <i class="icon_cogs"></i>
+                    <span>Tools</span>
+                </a>
+            </li> 
+            <li id="pjdb_user_help" class="active">
+                <a class="" href="https://login2explore.com/jpdb/docs.html" target="_blank">
+                    <i class="icon_documents_alt"></i>
+                    <span>Help</span>
+                </a>
+            </li> 
+<!--            <li id="pjdb_settings" class="active">
+                <a class="" href="settings.html">
+                    <i class="icon_tools"></i>
+                    <span>SMTP Settings</span>
+                </a>
+            </li> -->
+            <li id="pjdb_profile" class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/profile.html">
+                    <i class="icon_profile"></i>
+                    <span>Profile</span>
+                </a>
+            </li> 
+            <li id="pjdb_change_pw" class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/change_pw.html">
+                    <i class="icon_key_alt"></i>
+                    <span>Change Password</span>
+                </a>
+            </li> 
+            <!--            <li  id="pjdb_download" class="active">
+                            <a class="" href="download.html">
+                                <i class="icon_download"></i>
+                                <span>Download</span>
+                            </a>
+                        </li>-->
+            <li class="active">
+                <a class="" href="http://api.login2explore.com:5577/user/dashboard.html" onclick="myLogout()">
+                    <i class="icon_upload"></i>
+                    <span>Logout</span>
+                </a>
+            </li> 
+
+        </ul>
+        <!-- sidebar menu end-->
+    </div>
+</aside></div>
+            <!--main content start-->
+            <section id="main-content">
+                <section class="wrapper">
+                    <div class="row">
+
+                        <div class="col-md-3">
+
+                            <div class="social-box facebook ">
+                                <i class="fa fa-database"> <span style="font-size: 17px; font-family: &#39;Lato&#39;, sans-serif;"> DATABASE</span></i>
+                                <ul>
+                                    <li>
+                                        <strong id="pjdb-db-count">1</strong>
+                                        <span style="color: black;">In Use</span>
+                                    </li>
+                                    <li>
+                                        <strong id="pjdb-db-allowed">10</strong>
+                                        <span style="color: black;">Allowed</span>
+                                    </li>
+                                </ul>
+                            </div><!--/social-box-->
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <div class="social-box twitter ">
+                                <i class="fa fa-table"><span style="font-size: 17px; font-family: &#39;Lato&#39;, sans-serif;"> RELATIONS</span></i>
+                                <ul>
+                                    <li>
+                                        <strong id="pjdb-rel-count">1</strong>
+                                        <span style="color: black;">In Use</span>
+                                    </li>
+                                    <li>
+                                        <strong id="pjdb-rel-allowed">1000</strong>
+                                        <span style="color: black;">Allowed</span>
+                                    </li>
+                                </ul>
+                            </div><!--/social-box-->
+                        </div>
+                        <div class="col-md-3">
+
+                            <div class="social-box google-plus ">
+                                <i class="fa fa-key" style="background: #97d3c5"><span style="font-size: 17px; font-family: &#39;Lato&#39;, sans-serif;"> INDEXES</span></i>
+                                <ul>
+                                    <li>
+                                        <strong id="pjdb-index-count">4</strong>
+                                        <span style="color: black;">In Use</span>
+                                    </li>
+                                    <li>
+                                        <strong id="pjdb-index-allowed">2000</strong>
+                                        <span style="color: black;">Allowed</span>
+                                    </li>
+                                </ul>
+                            </div><!--/social-box-->
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <div class="social-box linkedin ">
+                                <i class="fa fa-file-text" style="background: burlywood"><span style="font-size: 17px; font-family: &#39;Lato&#39;, sans-serif;"> RECORDS</span></i>
+                                <ul>
+                                    <li>
+                                        <strong id="pjdb-record-count">1</strong>
+                                        <span style="color: black;">In Use</span>
+                                    </li>
+                                    <li>
+                                        <strong id="pjdb-record-allowed">10000</strong>
+                                        <span style="color: black;">Allowed</span>
+                                    </li>
+                                </ul>
+                            </div><!--/social-box-->
+                        </div>
+
+
+                        <!--/.info-box-->
+                        <!--/.col-->
+
+
+                    </div>
+                    <!-- page end-->
+                </section>
+            </section>
+            <footer class="footer">
+                <div id="pjdb-common-footer">
+<!--<div class="text-right" id="pjdb_footer">
+    <div class="credits">
+
+                All the links in the footer should remain intact. 
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
+
+        Copyright © 2017 - <a href="https://login2explore.com">Login2Xplore</a>, All Rights Reserved &nbsp;
+
+                <a href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+</div>-->
+
+<script src="./JsonPowerDB Home Page_files/footer-script.js.download"></script>
+
+<style>
+    #pjdb_footer {
+        position:fixed;bottom:0;left:0;right:0;height:30px; 
+    } 
+</style>
+
+<div class="text-right" id="pjdb_footer">
+    <div class="credits">
+
+        <!--        All the links in the footer should remain intact. 
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin-->
+        JPDB <span id="jpdb-sev-version">_0_3_2.20211203</span> -
+        Copyright © 2017 - <a href="http://login2explore.com/">Login2Xplore</a>, All Rights Reserved &nbsp;
+
+        <!--        <a href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+    </div>
+</div>
+</div>
+            </footer>
+        </section>
+
+        <script>
+            function pjdbDataBase()
+            {
+                var userToken = localStorage.getItem('jpdbUserToken');
+                var myObj = {
+                    token: userToken
+                };
+                var obj = JSON.stringify(myObj);
+
+                var db_actual;
+                var rel_actual;
+                var index_actual;
+                var record_actual;
+                var db_allowed;
+                var rel_allowed;
+                var index_allowed;
+                var record_allowed;
+                $.post(userBaseURL + "/get_user_license_info", obj, function (result) {
+                    var jsonObj = JSON.parse(result);
+                    var mydata = JSON.parse(jsonObj.data);
+                    $.each(mydata, function (index, value) {
+                        if (index == "dbCount")
+                        {
+                            db_actual = value[0];
+                            db_allowed = value[1];
+                        } else if (index == "relCount")
+                        {
+                            rel_actual = value[0];
+                            rel_allowed = value[1];
+                        } else if (index == "indexCount")
+                        {
+                            index_actual = value[0];
+                            index_allowed = value[1];
+                        } 
+                        else if (index == "rowCount")
+                        {
+                            record_actual = value[0];
+                            record_allowed = value[1];
+                        }
+//                        alert("Index = " + index + " Value = " + value);
+                    });
+                    $("#pjdb-db-count").html(db_actual);
+                    $("#pjdb-db-allowed").html(db_allowed);
+                    $("#pjdb-rel-count").html(rel_actual);
+                    $("#pjdb-rel-allowed").html(rel_allowed);
+                    $("#pjdb-index-count").html(index_actual);
+                    $("#pjdb-index-allowed").html(index_allowed);
+                    $("#pjdb-record-count").html(record_actual);
+                    $("#pjdb-record-allowed").html(record_allowed);
+                });
+            }
+            ;
+        </script>
+
+        <script src="./JsonPowerDB Home Page_files/jquery.js.download"></script>
+        <script src="./JsonPowerDB Home Page_files/bootstrap.min.js.download"></script>
+        <!-- nice scroll -->
+        <script src="./JsonPowerDB Home Page_files/jquery.scrollTo.min.js.download"></script>
+        <script src="./JsonPowerDB Home Page_files/jquery.nicescroll.js.download" type="text/javascript"></script>
+        <!-- jquery validate js -->
+        <script type="text/javascript" src="./JsonPowerDB Home Page_files/jquery.validate.min.js.download"></script>
+        <!--custome script for all page-->
+        <script src="./JsonPowerDB Home Page_files/scripts.js.download"></script>    
+        <!--<script src="./js/common-loggedin.js"></script>-->
+        <script> $("#pjdb-common-header").load("header.html");</script>
+        <script> $("#pjdb-common-navigation").load("navigation.html");</script>
+        <script> $("#pjdb-common-footer").load("footer.html");</script>
+
+        <!-- custom form validation script for this page-->
+        <!--<script src="./js/dashboard-script.js"></script>-->
+    
+<div id="ascrail2000" class="nicescroll-rails" style="width: 6px; z-index: 1000; background: rgb(247, 247, 247); cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; display: none;"><div style="position: relative; top: 0px; float: right; width: 6px; height: 0px; background-color: rgb(0, 122, 255); background-clip: padding-box; border-radius: 10px;"></div></div><div id="ascrail2000-hr" class="nicescroll-rails" style="height: 6px; z-index: 1000; background: rgb(247, 247, 247); position: fixed; left: 0px; width: 100%; bottom: 0px; cursor: default; display: none;"><div style="position: relative; top: 0px; height: 6px; width: 0px; background-color: rgb(0, 122, 255); background-clip: padding-box; border-radius: 10px;"></div></div></body></html>
